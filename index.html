@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{min-height:100%;background:#050505;}
 #shell{width:100%;background:#050505;display:flex;align-items:flex-start;justify-content:center;}
-#app{font-family:'Noto Serif JP',serif;background:#080808;width:520px;flex-shrink:0;position:relative;}
+#app{font-family:'Noto Serif JP',serif;background:#080808;width:980px;flex-shrink:0;position:relative;}
 .pg{display:none;}
 .pg.active{display:block;animation:pgIn .45s ease forwards;}
 @keyframes pgIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
@@ -27,7 +27,7 @@ html,body{min-height:100%;background:#050505;}
 #sub-tag{font-family:'Shippori Mincho B1',serif;font-size:10px;letter-spacing:.35em;color:#8a0000;border:1px solid #3a0000;padding:3px 14px;margin-bottom:.6rem;position:relative;z-index:2;}
 #ititle{font-family:'Shippori Mincho B1',serif;font-size:26px;font-weight:800;color:#e8dcc8;letter-spacing:.18em;text-align:center;line-height:1.4;position:relative;z-index:2;text-shadow:0 0 30px rgba(180,20,20,.4);margin-bottom:.2rem;}
 #title-acc{width:80px;height:2px;background:linear-gradient(90deg,transparent,#cc2222,transparent);margin:0 auto .8rem;position:relative;z-index:2;}
-#hero-wrap{position:relative;z-index:2;width:100%;height:360px;overflow:hidden;border:1px solid #3a0000;box-shadow:0 0 0 1px #000,0 6px 32px rgba(0,0,0,.7);margin-bottom:1rem;background:#0a0a0a;}
+#hero-wrap{position:relative;z-index:2;width:100%;height:500px;overflow:hidden;border:1px solid #3a0000;box-shadow:0 0 0 1px #000,0 6px 32px rgba(0,0,0,.7);margin-bottom:1rem;background:#0a0a0a;}
 #hero-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 50%,rgba(0,0,0,.5));pointer-events:none;z-index:1;}
 #hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:sepia(.12) brightness(.88) contrast(1.05);}
 #copy-wrap{width:100%;position:relative;z-index:2;margin-bottom:1.2rem;}
@@ -58,7 +58,7 @@ html,body{min-height:100%;background:#050505;}
 .pg-h1{text-align:center;font-family:'Shippori Mincho B1',serif;font-size:14px;font-weight:700;color:#8a0000;letter-spacing:.35em;margin-bottom:1rem;}
 .pg-h1::after{content:'';display:block;width:60px;height:1px;background:linear-gradient(90deg,transparent,#8a0000,transparent);margin:6px auto 0;}
 .cp{display:flex;align-items:flex-start;gap:14px;margin-bottom:1rem;}
-.cav{flex-shrink:0;width:80px;height:80px;border-radius:4px;border:1px solid #3a0000;box-shadow:0 0 0 1px #000,0 4px 24px rgba(180,0,0,.3);overflow:hidden;position:relative;}
+.cav{flex-shrink:0;width:150px;height:150px;border-radius:4px;border:1px solid #3a0000;box-shadow:0 0 0 1px #000,0 4px 24px rgba(180,0,0,.3);overflow:hidden;position:relative;}
 .cav img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.92) contrast(1.05);}
 .cav::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(100,0,0,.15),transparent 60%);pointer-events:none;}
 .cbb{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0;}
@@ -74,7 +74,7 @@ html,body{min-height:100%;background:#050505;}
 #name-hint{font-size:10px;color:#3a3028;margin-top:5px;}
 #name-err{font-size:11px;color:#cc3333;min-height:16px;margin-top:4px;}
 #spin-lbl{text-align:center;font-family:'Shippori Mincho B1',serif;font-size:12px;letter-spacing:.2em;color:#5a4a3a;margin-bottom:1rem;}
-#ww{position:relative;width:220px;height:220px;margin:0 auto 1rem;}
+#ww{position:relative;width:450px;height:450px;margin:0 auto 1rem;}
 #whcv{border-radius:50%;display:block;}
 #ptr{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:22px solid #ef4444;filter:drop-shadow(0 0 6px rgba(239,68,68,.7));z-index:10;}
 #spin-res{text-align:center;font-family:'Shippori Mincho B1',serif;font-size:13px;color:#c8b8a0;letter-spacing:.1em;min-height:20px;margin-bottom:.8rem;}
@@ -164,7 +164,7 @@ html,body{min-height:100%;background:#050505;}
     <div class="cbb"><div class="cnm">貓屋敷　湊</div><div class="ctx"><div class="cdlg" id="d-spin">……轉動命運之盤。</div></div></div>
   </div>
   <div id="spin-lbl">轉到的名字為先攻</div>
-  <div id="ww"><div id="ptr"></div><canvas id="whcv" width="220" height="220"></canvas></div>
+  <div id="ww"><div id="ptr"></div><canvas id="whcv" width="450" height="450"></canvas></div>
   <div id="spin-res"></div>
   <div id="spin-btn-wrap">
     <button class="rpg-btn" id="spin-btn" onclick="spinWheel()">
@@ -190,7 +190,7 @@ html,body{min-height:100%;background:#050505;}
       <div class="si"><span class="sl">湊</span><span class="sn" id="sa">0</span></div>
     </div>
   </div>
-  <div id="bw"><canvas id="gcv" width="640" height="640"></canvas></div>
+  <div id="bw"><canvas id="gcv" width="850" height="850"></canvas></div>
   <div id="actbar">
     <button class="rpg-btn rpg-sm" onclick="nextRound()">
       <span class="rpg-top-line"></span>
@@ -249,8 +249,8 @@ const SARC=2*Math.PI/4;let spinning=false,cRot=0;
 
 function drawWheel(rot){
   const cv=document.getElementById('whcv');if(!cv)return;
-  const ctx=cv.getContext('2d');const cx=110,cy=110,r=104;
-  ctx.clearRect(0,0,220,220);
+  const ctx=cv.getContext('2d');const cx=225,cy=225,r=210;
+  ctx.clearRect(0,0,450,450);
   ctx.beginPath();ctx.arc(cx,cy,r+2,0,2*Math.PI);ctx.strokeStyle='#7f1d1d';ctx.lineWidth=2;ctx.stroke();
   SEGS.forEach((seg,i)=>{
     const nm=pName.length>5?pName.slice(0,4)+'…':pName;
